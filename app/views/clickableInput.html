@@ -1,3 +1,25 @@
-<span>
-	<span>{{ngModel}}</span>
-</span>
+<div class="clickable-input">
+	<div ng-hide="active" class="ci-control inactive">
+	    <span>
+	        <span class="ci-control-label">{{ngModel}}</span>
+	        <span class="ci-action-box">
+	            <span class="ci-btn ci-btn-inactive" ng-click="active = !active">
+	                <span class="glyphicon glyphicon-pencil"></span>
+	            </span>
+	        </span>
+	    </span>
+	</div>
+	<div ng-show="active" class="ci-control active">
+	    <form>
+	        <input ng-model="ngModel" type="text" class="form-control" />
+	        <span class="ci-action-box">
+	            <button class="ci-btn ci-btn-active" ng-click="active = !active">
+	                <span class="glyphicon glyphicon-ok"></span>
+	            </button>
+	            <button class="ci-btn ci-btn-active" ng-click="active = !active">
+	                <span class="glyphicon glyphicon-remove"></span>
+	            </button>
+	        </span>
+	    </form>
+	</div>
+</div>

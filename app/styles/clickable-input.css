@@ -1,0 +1,79 @@
+/**
+ * Clickable Input
+ */
+
+.ci-control {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: inline;
+}
+
+.ci-control-label {
+  padding-top: 5px;
+}
+
+.ci-control.active {
+  display: block;
+}
+
+.ci-control.active .ci-action-box {
+  position: absolute;
+  bottom: -38px;
+  right: 0px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  background-color: #f0f0f0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.ci-control.active .form-control {
+  display: block;
+  padding: 5px 5px;
+  height: 33px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-bottom-right-radius: 0px;
+}
+
+.ci-btn-active {
+  background-color: #DDDED9;
+  color: #707070;
+  box-shadow: none;
+  border: 1px solid #cccccc;
+  padding: 2px 6px 3px;
+}
+
+.ci-btn-active:hover {
+  background-color: #EAEBE6;
+  color: #333;
+}
+
+.ci-control.inactive {
+  padding: 5px 0px 5px 5px;
+  border: none;
+}
+
+.ci-control.inactive:hover {
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+.ci-control.inactive:hover .ci-action-box {
+  opacity: 1;
+  transition: opacity 150ms ease-in 0ms;
+}
+
+.ci-control.inactive .ci-action-box {
+  opacity: 0;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #f7f7f7;
+  padding: 5px;
+  border-left: 1px solid #cccccc;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
